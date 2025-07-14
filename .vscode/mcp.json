@@ -1,0 +1,26 @@
+{
+  "inputs": [
+    {
+      "password": true,
+      "id": "mcp-server-token",
+      "description": "Enter the token for the MCP server",
+      "type": "promptString"
+    }
+  ],
+  "servers": {
+    "powerpoint-server": {
+      "type": "http",
+      "url": "http://localhost:3000/mcp",
+      "headers": {
+        "Authorization": "Bearer ${input:mcp-server-token}"
+      }
+    },
+    "powerpoint-server-remote": {
+      "type": "http",
+      "url": "https://<env-name>.<container-id>.<region>.azurecontainerapps.io/mcp",
+      "headers": {
+        "Authorization": "Bearer ${input:mcp-server-token}"
+      }
+    }
+  }
+}

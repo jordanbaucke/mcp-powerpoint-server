@@ -1,0 +1,11 @@
+# Azure Developer CLI (azd) configuration
+name: mcp-powerpoint-server
+metadata:
+  template: mcp-powerpoint-server@0.0.1-beta
+  repository: https://github.com/Azure-Samples/mcp-container-ts
+
+services:
+  mcp-powerpoint-server:
+    project: .
+    language: js
+    host: containerapp

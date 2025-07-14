@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "powerpoint": {
+      "command": "node",
+      "args": ["build/index.js"],
+      "env": {
+        "PORT": "3000"
+      }
+    }
+  }
+}

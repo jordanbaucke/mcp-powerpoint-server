@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "powerpoint": {
+      "command": "node",
+      "args": ["/Users/jordan.baucke/Code_Projects/mcp-powerpoint-server/dist/index.js"],
+      "env": {}
+    }
+  }
+}

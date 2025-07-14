@@ -1,0 +1,48 @@
+{
+  "name": "mcp-powerpoint-server",
+  "version": "1.0.0",
+  "description": "MCP server for creating PowerPoint documents using Azure Container Apps",
+  "main": "build/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "dev": "npm run build && npm start",
+    "watch": "tsc --watch",
+    "test": "npm run build && node build/test.js",
+    "inspect": "npx @modelcontextprotocol/inspector",
+    "azure:login": "az login && azd auth login",
+    "azure:provision": "azd provision",
+    "azure:deploy": "azd deploy",
+    "azure:up": "azd up",
+    "azure:down": "azd down --purge --force"
+  },
+  "keywords": [
+    "mcp",
+    "powerpoint",
+    "presentation",
+    "office",
+    "azure",
+    "container-apps"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "chalk": "^5.4.1",
+    "debug": "^4.4.1",
+    "express": "^4.21.2",
+    "fs-extra": "^11.2.0",
+    "officegen": "^0.6.5"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.12",
+    "@types/express": "^4.17.23",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
